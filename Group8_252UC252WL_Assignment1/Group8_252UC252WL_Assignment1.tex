@@ -1,0 +1,451 @@
+\documentclass[12pt,a4paper]{article}
+
+% =========================================
+% PAGE SETUP
+% =========================================
+\usepackage[
+    a4paper,
+    margin=25.4mm
+]{geometry}
+
+
+% =========================================
+% BASIC PACKAGES
+% =========================================
+\usepackage[american]{babel}
+\usepackage{graphicx}       % Images
+\usepackage[
+    style=apa,
+    backend=biber
+]{biblatex}
+\DeclareLanguageMapping{american}{american-apa}
+\usepackage{amssymb}        % Mathematical symbols
+\usepackage{booktabs}       % Professional tables
+\usepackage{float}          % [H] figure/table positioning
+\usepackage{caption}        % Caption customization
+\usepackage{hyperref}       % Hyperlinks and references
+\usepackage{ragged2e}       % Text alignment
+\usepackage{setspace}       % Line spacing
+\usepackage{hyperref}       % Clickable links and references
+\usepackage{amsmath}        % Mathematics
+% =========================================
+% APA REFERENCING
+% =========================================
+
+\addbibresource{main.bib}
+
+
+% =========================================
+% HYPERLINK SETTINGS
+% =========================================
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black,
+    citecolor=black,
+    pdftitle={Critical Research Review Article}
+}
+
+% Table and figure caption formatting
+\DeclareCaptionFont{captionnine}{\fontsize{9pt}{11pt}\selectfont}
+
+\captionsetup[table]{
+    font=captionnine,
+    justification=raggedright,
+    singlelinecheck=false,
+    labelsep=colon
+}
+
+\captionsetup[figure]{
+    font=captionnine,
+    justification=centering,
+    singlelinecheck=false,
+    labelsep=colon
+}
+
+
+% =========================================
+% DOCUMENT
+% =========================================
+\begin{document}
+
+\begin{center}
+
+{\fontsize{18}{22}\selectfont\textbf{CRITICAL RESEARCH REVIEW ARTICLE}}
+
+\vspace{0.5cm}
+
+{\fontsize{18}{22}\selectfont\textbf{PASSWORD REUSABILITY : USER BEHAVIOR, SECURITY RISKS AND MITIGATION STRATEGIES}}
+
+\vspace{1cm}
+
+{\fontsize{12}{14}\selectfont\textbf{Group Members}}
+
+\vspace{0.3cm}
+
+{\fontsize{12}{14}\selectfont
+1. HAZRIQ ZALFAR BIN HAFIZAL -- 252UC252WL
+}
+
+\vspace{0.8cm}
+
+{\fontsize{12}{14}\selectfont
+\textbf{Programme:} B.C.S (Hons)\\
+\textbf{Course:} CPT6123 RESEARCH METHOD IN COMPUTER SCIENCE\\
+\textbf{Lecturer:} Ms. Alaa Haddad\\
+\textbf{Semester:} 2620 - Trimester July/August 2026\\
+\textbf{Submission Date:} 12 September 2026
+}
+
+\end{center}
+
+
+% =========================================
+% ABSTRACT
+% =========================================
+
+\vspace{0.5cm}
+
+\noindent
+\textbf{Abstract}
+
+\vspace{0.2cm}
+
+\begin{justify}
+
+Reusing passwords is still one of the biggest weaknesses in modern cybersecurity. 
+In an effort to avoid mental fatigue, users often reuse passwords across several platforms despite being well aware of the consequences. 
+The behavioral factors that lead to password reusability are examined in this study, along with the security dangers that result, particularly password stuffing attacks, and the effectiveness of existing technical countermeasures. 
+We believe that in order to neutralize this threat, systemic changes toward passwordless authentication and automated credential management are necessary, even though user education is still important.
+
+
+\vspace{0.3cm}
+
+\textbf{Keywords:} Password; Reusability; Authentication, Cybersecurity; Behavior
+
+\end{justify}
+
+
+
+
+% =========================================
+% TABLE OF CONTENTS
+% =========================================
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+
+
+% =========================================
+% MAIN CONTENT
+% =========================================
+
+\begin{justify}
+
+% =========================================
+% 1. INTRODUCTION
+% =========================================
+
+\section{Introduction}
+
+\subsection{Background}
+
+The relationship of user experience and security in password systems is the primary focus of the issue. 
+It looks into how password standards affect user comfort of usage as well as the level of security against cyberattacks. 
+The trade-off between usability and security is the main issue. 
+Stronger password regulations, such as long, complicated passwords that are changed often, increase vulnerability to phishing and brute-force attacks. 
+However, strict regulations frequently result in bad user behavior, such as writing down passwords, using them for several accounts, or selecting predictable patterns. 
+The exact security those regulations were intended to uphold is compromised as a result of these weaknesses. Password breaches are one of the most common attack routes, which is why this occurred. 
+If users are unable to properly manage their credentials, even the most advanced security solutions will fail.
+Aside from that, its effect on the economy can result in data breaches that cost businesses millions of ringgit in recovery, legal responsibility, and reputational harm.  
+In order to respond to changing cyberthreats and create policies that enhance protection and usability while guaranteeing user compliance without sacrificing security, it is essential to study this subject.
+
+\subsection{Problem Statement}
+
+Currently, research shows that passwords remain the most common authentication method, but users struggle with complex requirements, leading to insecure practices like reuse or weak patterns. 
+The problem lies in the conflict between strong security policies and human usability, which often undermines protection. 
+Existing approaches, such as frequent password changes or strict complexity rules, have limitations because they frustrate users and fail to stop modern attacks like phishing or credential stuffing. 
+A review of existing research is necessary to identify gaps, evaluate effectiveness, and explore new solutions such as multi-factor authentication or passwordless systems, ensuring both security and usability are balanced.
+
+
+\subsection{Objectives of the Review}
+
+\begin{enumerate}
+
+    \item To review existing research related to Password Usability, focusing on how password policies affect both security and user behavior.  
+    \item To compare the approaches used by different researchers, highlighting strategies that balance strong protection with practical usability.  
+    \item To analyse the findings and limitations of existing studies, identifying where current solutions fail to address real-world user challenges.  
+    \item To identify research gaps and potential future research directions, guiding the development of more effective and user-friendly authentication methods.
+
+\end{enumerate}
+
+
+\subsection{Research Questions}
+
+\textbf{RQ1:} What approaches have been used by researchers to improve password usability while maintaining strong security?
+
+\vspace{0.2cm}
+
+\textbf{RQ2:} What are the major findings reported in existing studies regarding user behavior and password management?  
+
+\vspace{0.2cm}
+
+\textbf{RQ3:} What limitations exist in current password usability approaches, and how do they affect overall cybersecurity? 
+
+\vspace{0.2cm}
+
+\textbf{RQ4:} What research gaps and future opportunities can be identified to design more effective and user-friendly authentication systems? 
+
+
+% =========================================
+% 2. REVIEW METHODOLOGY
+% =========================================
+
+\section{Review Methodology}
+
+
+
+\subsection{Literature Search Strategy}
+
+For the literature search strategy, I relied on Google Scholar as the main database to gather relevant studies. The search keywords used were password usability, along with related terms such as authentication usability and user password behavior. 
+The search strings combined these keywords with Boolean operators, for example: "password usability AND security". 
+The publication period was restricted to works published from 2022 up until now, ensuring the review reflects the latest research. 
+Only peer‑reviewed journal articles, conference papers, and reputable academic publications were considered to maintain quality and credibility.
+
+
+\subsection{Inclusion and Exclusion Criteria}
+
+\end{justify}
+
+% =========================================
+% SAMPLE TABLE
+% =========================================
+
+\begin{table}[H]
+\caption{Inclusion and exclusion criteria used for the literature review}
+\label{tab:inclusion-exclusion}
+
+\fontsize{10pt}{12pt}\selectfont
+
+\begin{tabular}{|p{4cm}|p{5cm}|p{5cm}|}
+\hline
+\centering\textbf{Criteria} &
+\centering\textbf{Inclusion} &
+\centering\textbf{Exclusion}
+\tabularnewline
+\hline
+
+\centering Publication type &
+\centering Peer-reviewed research articles &
+\centering Non-peer-reviewed articles
+\tabularnewline
+\hline
+
+\centering Publication period &
+\centering 2022 - 2026 &
+\centering Articles outside selected period
+\tabularnewline
+\hline
+
+\centering Language &
+\centering English &
+\centering Other languages
+\tabularnewline
+\hline
+
+\centering Topic &
+\centering Directly related to password usability &
+\centering Not directly related to password usability
+\tabularnewline
+\hline
+
+\end{tabular}
+
+\end{table}
+
+% =========================================
+% 3. LITERATURE REVIEW
+% =========================================
+
+\section{Literature Review}
+
+\subsection{Theme / Area 1: Password Memorability}
+
+Research has focused heavily on password memorability, with studies emphasizing trade-offs between user memory and password strength (Fernando et al., 2023). The crucial role of memory in password management is emphasized by Gao et al. (2018), who connect memorability to three psychological theories: depth of processing, decay, and disruption, emphasizing frequent forgetfulness, particularly within 12 hours of formation. In support of this cognitive viewpoint, Woods \& Siponen (2019) used experimental approaches centered on user interactions to examine how repeated password verification during creation can increase memorability from 42\% to 70\%. However, they point out that the improvement may be temporary and dependent on usage frequency.
+
+\vspace{0.4cm}
+
+Recognition-based textual passwords have been considered in the field of password memorability as a means of improving usability while maintaining security. System-generated recognition passphrases are more memorable than recall-based passwords, according Wright et al., but they also reveal problems like cognitive mismatch that limit retrieval. 
+In contrast, Wasfi and Stone focuses on using various approaches to strike a compromise between usability and security, highlighting the fact that user-selected recognition textual passwords may provide better memorability but requires efficient system design to reduce guessability.
+
+\vspace{0.4cm}
+
+Studies on password memorability frequently compare the usage of technological tools such as password managers with users' dependence on cognitive memory. For instance, Simmons et al. (2021) highlight design models like credential inspections that indirectly support memorability by discouraging reuse and encouraging stronger creation practices, while Pearman et al. (2019) emphasize that convenience drives adoption of built-in managers, reducing the cognitive burden of remembering multiple passwords. In terms of methodology, Simmons systematized use cases among managers to demonstrate how prioritizing audit results can reduce user overwhelm, whereas Pearman used partially structured interviews with thirty participants. Both methods show that simplifying tools improves memorability, but there are still certain drawbacks: Simmons concentrated more on system design than user behavior, and Pearman's sample was small and university-based.
+Thus, these results imply that memorability is more about how tools balance usability and cognitive load than it is about password length or complexity.
+
+\subsection{Theme / Area 2: Password Storage Practices}
+
+According to Fernando (2023), due to memory limitations and convenience, many users use the same passwords for several accounts, creating serious security risks. For instance, 52\%–56\% of users frequently reuse passwords with little to no modification, while 45.7\% of users maintain the same password for several accounts.Users with technical backgrounds are using password managers more and more to handle passwords more securely. Password managers lessen the mental strain of memorizing numerous passwords by encrypting and storing users' credentials, which are frequently protected by a master password.
+
+\vspace{0.4cm}
+
+The majority of the published work focuses on the security issues associated with storing recognition-based text passwords, particularly those that are assigned by the system. These passwords demand a significant amount of storage space since they require extra verbal or spatial cues to help with memorability. According to studies like Al-Ameen et al., employing cues increases memorability but increases storage requirements and slows down login times, which reduces system efficiency. Purely textual password storage, on the other hand, is typically lighter, but unless paired with advanced entropy methods, this frequently compromises resistance to attacks.
+
+\vspace{0.4cm}
+
+According to Kablo (2024), research on password storage practices often contrasts manual strategies with automated password manager solutions. Pearman et al. (2019) found that many users rely on built-in managers primarily for convenience, storing credentials without much concern for long‑term organization, while Amft et al. (2021) highlighted that “security centers” and breach reports in managers often remain premium features, limiting accessibility. Methodologically, Pearman used interviews with 30 participants, whereas Amft combined expert reviews with user observations, showing how storage practices differ depending on tool availability. Simmons et al. (2021) further systematized password manager designs, noting that credential audits and categorization features improve storage hygiene by flagging reused or weak entries. Together, these studies suggest that while managers reduce risks of insecure storage, limitations in transparency, accessibility, and user motivation still hinder consistent adoption.
+
+
+
+\subsection{Theme / Area 3: Password Reuse Across Multiple Accounts}
+
+Users frequently reuse passwords because they are quick, simple to remember, and convenient. According to studies, quite a number of users use the same passwords for many services with little to no change. For example, 75\% of users said that they reuse passwords primarily for speed and convenience, and 45.7\% of users maintain the same password or set for various web services. Users frequently create passwords using predictable patterns like names, dates, keyboard layouts, or by slightly altering an already-existing password. This significantly weakens passwords and leaves them open to attacks. The majority of users are unable to recall numerous unique, high-entropy passwords due to the limited capacity of human memory. Despite growing security dangers, reuse is a useful coping strategy.
+
+\vspace{0.4cm}
+
+Due to consumers' mental challenges in remembering multiple unique credentials, password reuse across many accounts has been flagged as a severe security issue. According to studies, a large percentage of users reuse their passwords for many accounts, which raises the danger since if one account is compromised, hackers may be able to access other accounts with the same password. According to a poll referenced in the paper, 94\% of respondents reused at least one password across several accounts, emphasizing the frequency of this behavior and the dangers it implies.
+
+\vspace{0.4cm}
+
+Reusing passwords across several accounts is regularly identified as a significant security and usability issue. Through interviews, Pearman et al. (2019) demonstrated that users frequently reuse passwords for convenience, which lowers cognitive strain but increases vulnerability. On the other hand, Kablo et al. (2024) discovered that participants indicated reuse detection as their main reason for using credential audit techniques in password managers. In terms of methodology, Kablo et al. carried out eleven semi-structured interviews centered on audit interfaces, whereas Pearman relied on qualitative interviews with thirty participants. In order to avoid user overload, Simmons et al. (2021) suggested prioritizing reuse alerts in their further systematized password manager solutions. Together, these studies highlight that while reuse is driven by memorability and convenience, effective audit tools and prioritization strategies can mitigate risks, though limitations remain in user motivation and transparency of feedback.
+
+% =========================================
+% 5. SYNTHESIS OF FINDINGS
+% =========================================
+
+\section{Synthesis of Findings}
+
+\subsection{What Do the Studies Agree On?}
+
+Despite its flaws, passwords continue to be the most popular authentication technique, according to the evaluated literature. According to Wasfi \& Stone (2023) and Fernando et al. (2023), text passwords continue to be the most popular because of their compatibility, affordability, and ease of use. In the same way, Kablo et al. (2024) argue that passwords remain important to digital authentication despite the use of password managers and credential audits. Users frequently reuse or create weak passwords because of cognitive limitations, which is another recurring finding about their struggles with secure password habits. Research consistently shows that difficulties with usability and memorability lead to insecure habits, which emphasizes the necessity of helpful tools like password managers.
+
+\vspace{0.4cm}
+
+Everyone agrees that using password managers improves both security and usability. Users who utilize password managers create stronger, more distinctive passwords than those who create them by hand, according to Fernando et al. (2023) and Rahalkar \& Gujar (2019). This is further supported by Kablo et al. (2024), who show that password managers' credential audit features encourage users to replace weak or frequently used passwords. The research collectively agree that although passwords have flaws, dangers can be greatly reduced by using password managers and supported methods.
+
+\subsection{What Do the Studies Disagree On?}
+
+The effectiveness of password substitutes is one point of disagreement. According to Fernando et al. (2023), due to usability and financial limitations, biometrics, tokens, and graphical passwords cannot completely replace textual passwords. Wasfi \& Stone (2023), on the other hand, emphasize recognition-based textual and graphical approaches as promising, suggesting that they would reduce the cognitive burden and improve memorability. Different views on whether alternatives may actually compete with conventional passwords are shown in this split.
+
+\vspace{0.4cm}
+
+The usability of audit tools and password managers is another topic of disagreement. According to Fernando et al. (2023), many users prefer memorization, and password managers are not commonly used because of usability and trust issues. Despite being first intimidated, Kablo et al. (2024) discovered that users who interact with credential audit features typically view them positively. This points to a conflict between optimism about usability gains when consumers are exposed to improved tools and skepticism about adoption.
+
+\subsection{Which Approaches Appear to Be Most Effective?}
+
+Research indicates that the most successful strategies combine supportive measures with passwords. According to Fernando et al. (2023), multi-factor authentication (MFA) and two-factor authentication (2FA) are useful strategies for strengthening password-based systems without completely replacing them. In the same way, Wasfi \& Stone (2023) demonstrate that recognition-based text passwords perform better in terms of memorability and attack resistance when paired with cognitive clues.
+
+\vspace{0.4cm}
+
+Additionally, password managers with credential audit capabilities seem to be very successful. According to Kablo et al. (2024), audit tools that find weak or reused passwords encourage users to strengthen their security, particularly when the results are prioritized and properly explained. This suggests that isolated password rules or manual memorization are less effective than systems that lessen cognitive load while offering useful feedback.
+
+\subsection{What Trends Can Be Observed?}
+
+The research show a number of new trends. In terms of technology, including biometrics, recognition-based methods, and hybrid authentication systems to supplement passwords is gaining popularity. In terms of methodology, researchers are increasingly concentrating on usability studies, such as controlled trials and interviews, instead of just technical assessments in order to comprehend actual user behavior.
+
+\vspace{0.4cm}
+Kablo et al. (2024) highlight the importance of prioritization algorithms in credential checks to lessen user overwhelm, whereas research like Fernando et al. (2023) and Wasfi \& Stone (2023) underline the necessity for bigger, more diversified datasets to validate conclusions. Lastly, there is a noticeable trend toward user-centered and explainable security technologies in applications and research fields. Transparency in the assessment of password strength, the adoption of new technologies, and the practical implementation of password managers are growing themes that indicate a future in which security and usability are more successfully matched.
+
+
+% =========================================
+% 6. RESEARCH GAPS
+% =========================================
+
+\section{Research Gaps}
+
+Small sample numbers and insufficient study verification methods are two significant gaps in the research. For example, when examining security audit interfaces in password managers, Kablo et al. (2024) only spoke with 11 participants. The tiny sample limits generalizability and emphasizes the need for larger-scale experimental validation to check whether these outcomes hold true across broader groups, even though their findings offer helpful insights into usability and adoption.
+
+\vspace{0.4cm}
+
+The restricted geographic scope of password management studies is another shortcoming. Fernando et al. (2023) looked at password usage and security breaches, although they mostly relied on research from particular areas like Europe and Sri Lanka. User behaviors and usability issues in other cultural and geographic contexts remain understudied as a result of this limited focus's lack of global viewpoints.
+Extensive global research would be helpful in determining the generalizability of findings.
+
+\vspace{0.4cm}
+
+The absence of technique comparison represents a third gap. In their study of textual, passphrase, mnemonic, and recognition-based password schemes, Wasfi \& Stone (2023) pointed out that there isn't a thorough side-by-side analysis to compare these methods' usability, memorability, and attack resistance. It is challenging to determine which approaches offer the optimum security and usability balance for various user groups in the absence of such comparison studies.
+
+\vspace{0.4cm}
+
+% =========================================
+% 7. FUTURE RESEARCH DIRECTIONS
+% =========================================
+
+\section{Future Research Directions}
+
+The use of larger datasets to evaluate results on password management and usability is a practical option for future research. The generalizability of many current studies is limited by their reliance on small participant pools or region-specific samples. Researchers would be able to better understand user behavior across various demographics and cultures, increase statistical dependability, and capture worldwide variances in password practices by expanding to larger, more diversified datasets.
+
+\vspace{0.4cm}
+
+The creation of better algorithms for password generation and verification is another important way. Current systems frequently fail to find a balance between security and memorability, resulting in either strong but easily forgotten system-generated passwords or weak passwords selected by users. In order to create safe yet approachable passwords, future research could concentrate on algorithms that combine cognitive psychology concepts, adaptive security rules, and personalization. 
+This would maintain resistance against attacks while directly addressing usability issues.
+
+\vspace{0.4cm}
+
+The implementation of cutting-edge technology like biometrics, behavioral authentication, or AI-driven adaptive systems is a third option. Although passwords are still widely used, integrating them with contemporary technologies could improve security and usability. For instance, hybrid systems that combine biometric clues with recognition-based textual passwords may lessen cognitive effort while enhancing attack resistance. Integration, privacy protections, and user acceptance of such integrated systems could all be investigated in this field of study.
+
+\vspace{0.4cm}
+
+Last but not least, explainable AI techniques are desperately needed for password auditing and management systems. When audit results are transparent, users tend to ignore or disregard them, as evidenced by complaints regarding ambiguous "weak password" labeling. Future studies should concentrate on creating explainable interfaces that make it obvious why a password is weak, how its strength is determined, and what steps should be taken to fix it. In the end, this would reinforce general password security procedures, promote adoption, and increase user trust.
+
+% =========================================
+% 8. DISCUSSION
+% =========================================
+
+\section{Discussion}
+
+By focusing on topics like memorability, storage methods, and reuse across accounts, the research community has gained a better understanding of how password usability directly affects security. The most promising methods seem to be those that lessen cognitive load without sacrificing security, including password managers and recognition-based systems.
+Strict regulations can result in risky user behavior, thus striking a balance between usability and solid security still presents significant hurdles. Since they don't deal with new threats like phishing and credential stuffing, current methods are insufficient.
+
+\vspace{0.4cm}
+
+Short-term studies, a lack of diverse user samples, and inadequate real-world testing are some of the limitations. The field of study has changed from concentrating only on password strength to taking usability and human aspects into account.
+The requirement for scalable, user-friendly solutions that reduce reuse and increase memorability without adding complexity is one of the major outstanding concerns. This demonstrates the need for ongoing research into passwordless systems and hybrid authentication techniques.
+
+% =========================================
+% 9. CONCLUSION
+% =========================================
+
+\section{Conclusion}
+
+In conclusion, the purpose of this review was to look at password usability, focusing on how security procedures interact with user behavior. The main findings indicate that while password managers and identification-based techniques provide a few solutions, memorability, storage habits, and password reuse continue to be serious problems.
+The lack of long-term usability studies, the small number of different user samples, and limited investigation of hybrid or passwordless systems are significant research gaps. The general conclusion is that, despite advancements, existing methods are insufficient to strike a compromise between security and usability.
+In order to tackle outstanding usability issues, future research options include creating scalable, user-friendly authentication techniques, investigating hybrid models, and incorporating passwordless technology.
+
+
+
+
+
+
+
+% =========================================
+% REFERENCES
+% =========================================
+
+\newpage
+
+\phantomsection
+\section{References}
+\addcontentsline{toc}{section}{References}
+
+%\printbibliography
+
+Kablo, E., Kader, K., \& Arias-Cabarcos, P. (2024, May). " I'm actually going to go and change these passwords": Analyzing the Usability of Credential Audit Interfaces in Password Managers. In Extended Abstracts of the CHI Conference on Human Factors in Computing Systems (pp. 1-13). 
+https://dl.acm.org/doi/abs/10.1145/3613905.3650889
+
+\vspace{0.4cm}
+
+Wasfi, H., \& Stone, R. (2023). Usability and security of knowledge-based authentication systems: a state-of-the-art review. 
+https://dr.lib.iastate.edu/entities/publication/6e52e358-5352-4b97-93e3-0804fd224d09
+
+\vspace{0.4cm}
+
+Fernando, W. P. K., Dissanayake, D. A. N. P., Dushmantha, S. G. V. D., Liyanage, D. L. C. P., \& Karunatilake, C. (2023). Challenges and opportunities in password management: a review of current solutions. Sri Lanka Journal of Social Sciences and Humanities, 3(2). 
+https://account.sljssh.sljol.info/index.php/sljo-j-sljssh/article/view/96
+
+
+
+\end{document}
